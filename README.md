@@ -38,7 +38,7 @@ Thank you for visiting.
 ### uBlock Origin
 
 
-[uBlock Origin](https://ublockorigin.com/) is an open-source, cross-platform browser extension for content filtering ï¿½ primarily aimed at neutralizing privacy invasion in an efficient, user-friendly method.
+[uBlock Origin](https://ublockorigin.com/) is an open-source, cross-platform browser extension for content filtering - primarily aimed at neutralizing privacy invasion in an efficient, user-friendly method.
 
 > uBlock Origin requires lists to operate.
 
