@@ -3,7 +3,7 @@
 
 * * *
 
-### 🧁 This script takes a recipe for Firefox, gathers the ingredients, combines, and bakes them. 🥧
+### 🥧 This script takes a recipe for Firefox, gathers the ingredients, combines, and bakes them.
 
 #### 🌶 I just combine them to my preference. 😋
 
