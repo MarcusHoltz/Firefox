@@ -22,8 +22,10 @@ Your Installed Firefox > Make a New Profile > Firefox UI Fix Install > VerticalF
 
 > Please note: Additional work is required to finish setting up the entire profile beyond running this script.
 
-Please see below for details.
 
+#### Please see below for details.
+
+Thank you for visiting.
 
 
 * * *
@@ -168,7 +170,7 @@ In the `Isolation` section, look for `Per Domain`:
 
 * * *
 
-> For more information about [`Multi-Account-Containers`](https://addons.mozilla.org/en-GB/firefox/addon/multi-account-containers) and [`Temporary Containers`](https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/) visit the [Firefox Container Guide](https://chefkochblog.wordpress.com/2018/04/03/firefox-container-guide/
+> For more information about [`Multi-Account-Containers`](https://addons.mozilla.org/en-GB/firefox/addon/multi-account-containers) and [`Temporary Containers`](https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/) visit the [Firefox Container Guide](https://chefkochblog.wordpress.com/2018/04/03/firefox-container-guide/)
 
 
 
