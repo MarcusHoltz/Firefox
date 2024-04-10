@@ -1,5 +1,5 @@
 #!/bin/sh
-clear;
+clear
 echo -n "Please describe this Firefox Profile with a name: " && read ffProfileName
 Addons_Installed_HERE="adnauseam,
 bitwarden-password-manager,
@@ -28,7 +28,6 @@ requestcontrol,
 ttsfox,
 ecosia-the-green-search,
 ddg-lite-search-provider"
-
 echo "Creating Profile"
 firefox -CreateProfile $ffProfileName
 # sed will search for `Path=` it will then try and find the line with the name of the firefox profile specified above. Then remove all text to the left of the `=` sign.
@@ -37,28 +36,21 @@ folder=$(sed -n "/Path=.*.$ffProfileName$/ s/.*=//p" ~/.mozilla/firefox/profiles
 profilePath="/home/$(whoami)/.mozilla/firefox/$folder"
 cd $profilePath
 echo "Profile Creation Finished"
-
 mkdir chrome sidebery 2> /dev/null
-
 echo "Install Theme and Select New Profile -- My favorite style is 1) Original"
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/black7375/Firefox-UI-Fix/master/install.sh)"
-
 cd $profilePath
-
 curl -sS https://raw.githubusercontent.com/christorange/VerticalFox/main/windows/userChrome.css >> ./chrome/userChrome.css
 curl -sS https://raw.githubusercontent.com/christorange/VerticalFox/main/sidebery/dark_sidebery_styles.css > ./sidebery/dark_sidebery_styles.css
-clear;
+clear
 echo -e "\nYou will need to paste in the styling for Sidebery.\nThe styles are located at $profilePath/sidebery\n" && sleep 2
-echo -e "\nA reminder will be displayed again at the end of the script." && sleep 5;
-
-curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js >> user.js && clear;
-curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/Securefox.js >> user.js && clear;
-curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/Fastfox.js >> user.js && clear;
-curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/Peskyfox.js >> user.js && clear;
-curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/Smoothfox.js >> user.js && clear;
-
+echo -e "\nA reminder will be displayed again at the end of the script." && sleep 5
+curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/user.js >> user.js && clear
+curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/Securefox.js >> user.js && clear
+curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/Fastfox.js >> user.js && clear
+curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/Peskyfox.js >> user.js && clear
+curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/Smoothfox.js >> user.js && clear
 echo -e "Preference persistantance file for edits :\nuser-overrides.js\n" && sleep 2;
-
 cat <<EOF > user-overrides.js
 // 2811: set/enforce what items to clear on shutdown
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);                         // [WARNING: false will allow everything in browser to stay upon shutdown]
@@ -86,10 +78,8 @@ user_pref("ui.systemUsesDarkTheme", 1);                                         
 user_pref("browser.startup.homepage", "https://www.github.com/marcusholtz");    // My favorite homepage
 //user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
 EOF
-
 cat user-overrides.js >> user.js
-echo "user-overrides.js merged into user.js" && sleep 2;
-
+echo "user-overrides.js merged into user.js" && sleep 2
 echo "...Now Downloading Addons..."
 installtmp="$(mktemp -d)"
 # trap will run when there is an exit command, or this script is terminated
@@ -114,6 +104,6 @@ for addon in $Addons_Installed_HERE; do
 	mv "$file" "$profilePath/extensions/$id.xpi"
 done
 echo "Addons Installed"
-
 if [ -f $profilePath/sidebery/dark_sidebery_styles.css ]; then
-    echo -e "\n==========================================================\n== You will need to paste in the styling for Sidebery. ==\n== Open Sidebery settings, Styles editor. And paste in ==\n== any of the new styles. You may find them in:        ==\n$profilePath/sidebery/dark_sidebery_styles.css\n==========================================================" && slee
+    echo -e "\n==========================================================\n== You will need to paste in the styling for Sidebery. ==\n== Open Sidebery settings, Styles editor. And paste in ==\n== any of the new styles. You may find them in:        ==\n$profilePath/sidebery/dark_sidebery_styles.css\n==========================================================" && sleep 2
+fi
