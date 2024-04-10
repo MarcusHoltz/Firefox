@@ -124,7 +124,7 @@ What are Containers and how can they help?
 > Containers are a tab/process isolation mechanism in order to separate each new tab/window from each other.
 > This means each Tab gets it's own resources.
 
-The **real power** is when you use [`Multi-Account-Containers`](https://addons.mozilla.org/en-GB/firefox/addon/multi-account-containers) for websites you frequent and [`Temporary Containers`](https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/) for everything else.
+The **real power** is when you use [Multi-Account-Containers](https://addons.mozilla.org/en-GB/firefox/addon/multi-account-containers) for websites you frequent and [Temporary Containers](https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/) for everything else.
 
 
 * * * 
@@ -170,7 +170,7 @@ In the `Isolation` section, look for `Per Domain`:
 
 * * *
 
-> For more information about [`Multi-Account-Containers`](https://addons.mozilla.org/en-GB/firefox/addon/multi-account-containers) and [`Temporary Containers`](https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/) visit the [Firefox Container Guide](https://chefkochblog.wordpress.com/2018/04/03/firefox-container-guide/)
+> For more information about [Multi-Account-Containers](https://addons.mozilla.org/en-GB/firefox/addon/multi-account-containers) and [Temporary Containers](https://addons.mozilla.org/en-US/firefox/addon/temporary-containers/) visit the [Firefox Container Guide](https://chefkochblog.wordpress.com/2018/04/03/firefox-container-guide/)
 
 
 
