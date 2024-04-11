@@ -85,21 +85,24 @@ installtmp="$(mktemp -d)"
 # trap will run when there is an exit command, or this script is terminated
 trap "rm -fr $installtmp" HUP INT QUIT TERM PWR EXIT
 AMOurl="https://addons.mozilla.org"
+# IFS (Internal Field Separator) will use both newline character and comma as separators when iterating over elements in the addons to install list. This allows flexibility in how the addons to install are presented to the end user.
 IFS=$'\n,'
 mkdir -p "$profilePath/extensions/"
 for addon in $Addons_Installed_HERE; do
 	echo "Installing $addon"
-	# grep will match anything that is not a double quote ("). When encountering a double quote, it will act as a terminating character for the grep operation. 
+	# The following command, grep will match anything that is not a double quote ("). When encountering a double quote, it will act as a terminating character for the grep operation. 
 	packageURL="$(curl --silent "$AMOurl/en-US/firefox/addon/${addon}/" | grep -o "$AMOurl/firefox/downloads/file/[^\"]*")"
 	# You can directly manipulate a string without assigning it to a variable, you can use command substitution:
 	# echo "Filename: $(basename 'https://example.com/downloads/file.zip')"
-	# Or this script uses parameter expansion:
+	# Or this script uses parameter expansion to removes everything up to and including the last slash:
 	file="${packageURL##*/}"
 	curl -LOs "$packageURL" >"$installtmp/$file"
-	# You can use command substitution instead of parameter expansion and use the following command:
+	# Parameter expansion prevents needing external commands, like awk. But,  you can use command substitution instead of parameter expansion and use the following command:
 	# unzip -p sidebery-5.2.0.xpi manifest.json | grep "\"id\"" | sed 's/"//' | awk -F '"' '{print $3}'
 	id="$(unzip -p "$file" manifest.json | grep "\"id\"")"
+        # This expansion removes the shortest match of \"* (a double quote followed by any character) from the end of the value stored in id. In this case, it effectively removes the double quote and everything after it from the filename.
 	id="${id%\"*}"
+        # The expansion below removes everything up to and including the last slash from the value stored in id, effectively extracting the filename.
 	id="${id##*\"}"
 	mv "$file" "$profilePath/extensions/$id.xpi"
 done
