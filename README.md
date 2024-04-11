@@ -15,6 +15,12 @@
 Your Installed Firefox > Make a New Profile > Firefox UI Fix Install > VerticalFox Added > Betterfox Added > user-overrides.js created > Firefox Addons Installed > Sidebery styles reminder
 ```
 
+* * *
+
+
+![Firefox Profile Install Script](https://raw.githubusercontent.com/MarcusHoltz/marcusholtz.github.io/main/assets/img/posts/firefox_profile_install.gif)
+
+
 
 * * * 
 
