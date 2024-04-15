@@ -21,13 +21,13 @@ downthemall,
 external-application,
 canvasblocker,
 checkmarks-web-ext,
-audioctx-fingerprint-defender,
 webext-private-bookmarks,
 refined-h264ify,
 requestcontrol,
 ttsfox,
 ecosia-the-green-search,
-ddg-lite-search-provider"
+ddg-lite-search-provider,
+audioctx-fingerprint-defender"
 echo "Creating Profile"
 firefox -CreateProfile $ffProfileName
 # sed will search for `Path=` it will then try and find the line with the name of the firefox profile specified above. Then remove all text to the left of the `=` sign.
