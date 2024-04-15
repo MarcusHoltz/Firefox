@@ -34,6 +34,18 @@ folder=$(sed -n "/Path=.*.$ffProfileName$/ s/.*=//p" ~/.mozilla/firefox/profiles
 profilePath="/home/$(whoami)/.mozilla/firefox/$folder"
 cd $profilePath
 echo "Profile Creation Finished"
+# Making edits to a new theme:  https://superuser.com/questions/1608096/how-to-inspect-firefoxs-ui
+# Find more themes:  https://firefoxcss-store.github.io/
+######################################################################
+## Add this theme for example: https://raw.githubusercontent.com/Shina-SG/Shina-Fox/main/userChrome.css
+## Add to the bottom of your userChrome.css:
+### #_c607c8df-14a7-4f28-894f-29e8722976af_-BAP, _c607c8df-14a7-4f28-894f-29e8722976af_-browser-action { display: none; } /** The tmp tabs button **/
+### #TabsToolbar .titlebar-buttonbox-container:not(:hover) .titlebar-buttonbox .titlebar-button { background-color: hsla(0, 0%, 0%, 0) !important; } 
+### #TabsToolbar .titlebar-buttonbox-container .titlebar-min{  background-color: #fac536 !important; }
+### #TabsToolbar .titlebar-buttonbox-container .titlebar-max, #TabsToolbar .titlebar-buttonbox-container .titlebar-restore{ background: #39ea49 !important; } 
+### #TabsToolbar .titlebar-buttonbox-container .titlebar-close{ background: #f25056 !important; } 
+##
+######################################################################
 mkdir chrome sidebery 2> /dev/null
 echo "Install Theme and Select New Profile -- My favorite style is 1) Original"
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/black7375/Firefox-UI-Fix/master/install.sh)"
