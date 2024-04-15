@@ -183,7 +183,7 @@ In the `Isolation` section, look for `Per Domain`:
 
 ## Script to Install Vertical Tabs, Betterfox, and Addons
 
-The script below will turn a vanilla Firefox profile into one that resembles a Floorp setup.
+The script below will turn a vanilla Firefox profile into one that resembles a Floorp setup. If you want the slow-motion self-bake version of this, check out [Sidetabs](https://addons.mozilla.org/en-US/firefox/addon/sidetabs/) by Jeb Nicholson.
 
 All `plugins` will be installed along with the `user.js` and `userChrome.css` changes.
 
