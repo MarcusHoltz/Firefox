@@ -25,7 +25,6 @@ ttsfox,
 ecosia-the-green-search,
 ddg-lite-search-provider,
 nighttab,
-checkmarks-web-ext,
 fastforwardteam,
 audioctx-fingerprint-defender"
 echo "Creating Profile"
