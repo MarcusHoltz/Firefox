@@ -119,6 +119,40 @@ You can find out more about how to use Sidebery and a more complete tutorial at:
 - [Holtzweb's Firefox Browser Setup with Sidebery](https://blog.holtzweb.com/posts/browsers-firefox-floorp-sidebery-setup/)
 
 
+* * *
+
+## Auto Tab Discard addon
+
+In the [Auto Tab Discard](https://addons.mozilla.org/en-US/firefox/addon/auto-tab-discard/) plugin, I find these options to work the best for me:
+
+- Discard inactive tabs after `137` minutes (zero to disable) when the number of inactive tabs exceeds `8`
+
+- `checkbox` Change favicon of discarded tabs
+
+- `checkbox` Do not discard a tab if it can display desktop notifications
+
+- Tabs with the following hostnames or regular expression rules are not being discarded:
+  - `pastebin.com, galeapps.gale.com, gale.udemy.com, dash.cloudflare.com, one.dash.cloudflare.com, mattermost.sofree.us, jsfiddle.net, my.nocix.net`
+
+- `checkbox` Store YouTube's timestamp before discarding
+
+- `uncheck` Open FAQs page on updates
+
+
+* * *
+
+## CanvasBlocker addon
+
+[CanvasBlocker](https://addons.mozilla.org/en-US/firefox/addon/canvasblocker/) is a great plugin, but it can quickly ruin your browsing experience. I would recomend avoiding `Stealth settings` or `Maximum protection`. 
+
+- To run the auto-configure wizard: 
+  - `Settings > Presets > Open`
+
+- If you run the Wizard, choose:
+  - `Convenient settings` and `reCAPTCHA exception`
+
+- Adding, `Stealth settings` or `Maximum protection` will slow down the browser. 
+  - Choose the presets based on your needs. 
 
 
 * * *
