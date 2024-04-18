@@ -1,7 +1,7 @@
 #!/bin/sh
 clear
 echo -n "Please describe this Firefox Profile with a name: " && read ffProfileName
-Addons_Installed_HERE="adnauseam,
+Addons_Installed_HERE="ublock-origin,
 bitwarden-password-manager,
 darkreader,
 sidebery,
@@ -255,17 +255,13 @@ user_pref("webgl.disabled", false);                                             
 // Adnauseam needs access before any ad blocking, to click the ads.
 // You can find out more about these at: https://mozilla.github.io/policy-templates/
 
-user_pref("privacy.trackingprotection.enabled", false);                         // If this policy is not configured, tracking protection is not enabled by default in the browser, but it is enabled by default in private browsing.
+//user_pref("privacy.trackingprotection.enabled", false);                         // If this policy is not configured, tracking protection is not enabled by default in the browser, but it is enabled by default in private browsing.
 
-user_pref("privacy.trackingprotection.pbmode.enabled", false);                  // tracking protection in Private Browsing mode on websites are ALLOWED
+//user_pref("privacy.trackingprotection.pbmode.enabled", false);                  // tracking protection in Private Browsing mode on websites are ALLOWED
 
-user_pref("privacy.trackingprotection.cryptomining.enabled", false);            // cryptomining scripts on websites are ALLOWED
+//user_pref("privacy.trackingprotection.cryptomining.enabled", false);            // cryptomining scripts on websites are ALLOWED
 
-user_pref("privacy.trackingprotection.fingerprinting.enabled", false);          // fingerprinting scripts on websites are ALLOWED
-
-user_pref("privacy.trackingprotection.enabled", false); // enabled with "Strict"
-
-user_pref("privacy.trackingprotection.pbmode.enabled", false); // DEFAULT
+//user_pref("privacy.trackingprotection.fingerprinting.enabled", false);          // fingerprinting scripts on websites are ALLOWED
 
 // Dont use Pocket, use Wallabag or Readeck
 //user_pref("extensions.pocket.enabled", false);                                  // Most user.js files already include Disable Pocket
