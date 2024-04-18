@@ -80,7 +80,6 @@ user_pref("identity.fxaccounts.enabled", false);    // This will remove the chan
 
 
 
-
 ////////////////////////////////////////////////////
 //   [SECTION 0100]: STARTUP
 ////////////////////////////////////////////////////
@@ -123,14 +122,11 @@ user_pref("browser.newtabpage.activity-stream.feeds.recommendationprovider", fal
 user_pref("browser.newtabpage.activity-stream.feeds.recommendationprovider", false);
 user_pref("browser.newtabpage.activity-stream.feeds.recommendationproviderswitcher", false);
 
-
 // 0000: Don't warn when opening about:config 
 user_pref("browser.aboutConfig.showWarning", false);  // for the new HTML version [FF71+]
 
-
 // 0001: Disable startup next>next>next screens
 user_pref("browser.onboarding.enabled", false);        // Hide onboarding tour (uses Google Analytics)
-
 
 // 0103: set HOME+NEWWINDOW page
 user_pref("browser.shell.checkDefaultBrowser", false); // Disable check for default browser
@@ -138,10 +134,8 @@ user_pref("browser.shell.checkDefaultBrowser", false); // Disable check for defa
 // Disable promo
 user_pref("browser.vpn_promo.enabled", false);
 
-
 // 0106: clear default topsites
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
-
 
 
 
@@ -161,7 +155,7 @@ user_pref("browser.quitShortcut.disabled", true);
 user_pref("findbar.modalHighlight", true);  // Dim the rest of the page
 
 // When double-clicking a word on a page, only copy the word itself, not the space character next to it 
-// user_pref("layout.word_select.eat_space_to_next_word", false);   // Most user.js files already include removing the white space next to a word
+//user_pref("layout.word_select.eat_space_to_next_word", false);   // Most user.js files already include removing the white space next to a word
 
 // disable telemetry of what default browser you use [WINDOWS]
 user_pref("default-browser-agent.enabled", false);
@@ -186,11 +180,10 @@ user_pref("dom.security.https_only_mode_error_page_user_suggestions", true);
 user_pref("security.insecure_connection_text.enabled", true);
 
 // More zoom amounts
-user_pref("toolkit.zoomManager.zoomValues", .3,.5,.67,.8,.9,1,1.1,1.15,1.2,1.25,1.33,1.5,1.7,2,2.4,3,4,5);
+user_pref("toolkit.zoomManager.zoomValues", ".3,.5,.67,.8,.95,.9,1,1.1,1.15,1.2,1.25,1.33,1.5,1.7,2,2.4,3,4,5");
 
 // any time I click on a bookmark it opens in another tab
 user_pref("browser.tabs.loadBookmarksInTabs", true);
-
 
 
 
@@ -205,7 +198,6 @@ user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 
 
 
-
 ////////////////////////////////////////////////////
 //   [SECTION 1700]: CONTAINERS
 ////////////////////////////////////////////////////
@@ -214,10 +206,8 @@ user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("privacy.userContext.enabled", true);
 user_pref("privacy.userContext.ui.enabled", true);
 
-
 // 1702: set behavior on "+ Tab" button to just open a new tab
 user_pref("privacy.userContext.newTabContainerOnLeftClick.enabled", false);
-
 
 
 
@@ -228,14 +218,12 @@ user_pref("privacy.userContext.newTabContainerOnLeftClick.enabled", false);
 // 2810: enable Firefox to clear items on shutdown
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);                         // [WARNING: false will allow everything in browser to stay upon shutdown]
 
-
 // 2811: set/enforce what items to clear on shutdown
 user_pref("privacy.clearOnShutdown.cache", false);                              // [DEFAULT: true]
 user_pref("privacy.clearOnShutdown.downloads", true);                           // [DEFAULT: true]
 user_pref("privacy.clearOnShutdown.formdata", true);                            // [DEFAULT: true]
 user_pref("privacy.clearOnShutdown.history", false);                            // [DEFAULT: true]
 user_pref("privacy.clearOnShutdown.sessions", false);                           // [DEFAULT: true]
-
 
 
 
@@ -247,15 +235,12 @@ user_pref("privacy.clearOnShutdown.sessions", false);                           
 // Firefox RFP has some side effects: mainly timezone is UTC, letterboxing, and websites will prefer light theme
 user_pref("privacy.resistFingerprinting", false);                               // Disable RFP to use localtimezone and Canvas API
 
-
 // 4504: disable RFP letterboxing
 // Firefox RFP will randomize the canvas, causing borders around viewframe
 user_pref("privacy.resistFingerprinting.letterboxing", false);                  // Disable letterboxing, basically if you disable above - disable this
 
-
 // 4510: disable using system colors
 user_pref("browser.display.use_system_colors", false);                          // Do not use default dark mode or light mode
-
 
 // 4520: disable WebGL (Web Graphics Library)
 user_pref("webgl.disabled", false);                                             // Enable WebGL (Web Graphics Library) for Canvas API
@@ -276,20 +261,19 @@ user_pref("privacy.trackingprotection.cryptomining.enabled", false);            
 user_pref("privacy.trackingprotection.fingerprinting.enabled", false);          // fingerprinting scripts on websites are ALLOWED
 
 // Dont use Pocket, use Wallabag or Readeck
-user_pref("extensions.pocket.enabled", false);                                  // Most user.js files already include Disable Pocket
+//user_pref("extensions.pocket.enabled", false);                                  // Most user.js files already include Disable Pocket
 
 user_pref("general.autoScroll", true);                                          // Enable AutoScrolling
 
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);         // Enable userchrome.css
 
-// user_pref("browser.urlbar.update2.engineAliasRefresh", true);                // Most user.js files already include Add button to add custom search engines
+//user_pref("browser.urlbar.update2.engineAliasRefresh", true);                // Most user.js files already include Add button to add custom search engines
 
 user_pref("ui.systemUsesDarkTheme", 1);                                         // Dark Mode
 
 user_pref("browser.startup.homepage", "https://www.github.com/marcusholtz");    // My favorite homepage
 
 //user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
-
 
 
 
