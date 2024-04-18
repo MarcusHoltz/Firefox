@@ -76,6 +76,9 @@ user_pref("browser.startup.page", 3);                                           
 // PREF: disable Firefox Sync
 user_pref("identity.fxaccounts.enabled", false);    // This will remove the chance to use Firefox sync all together
 
+// PREF: Firefox Sidebar Position on Right
+user_pref("sidebar.position_start", false);    // true=left, false=right
+
 // NOTE: If you have over 300 Mbps internet dedicated to a single browser, you may want to just disable Disk Cache, unless you're caching on an NVME.
 
 
