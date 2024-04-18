@@ -63,6 +63,9 @@ curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/Peskyfox.js 
 curl -sS https://raw.githubusercontent.com/yokoffing/Betterfox/main/Smoothfox.js >> user.js && clear
 echo -e "Preference persistantance file for edits :\nuser-overrides.js\n" && sleep 2;
 cat <<EOF > user-overrides.js
+
+
+
 ////////////////////////////////////////////////////
 //   Quick changes you may want to make
 ////////////////////////////////////////////////////
@@ -154,11 +157,11 @@ user_pref("browser.newtab.preload", false);
 user_pref("browser.quitShortcut.disabled", true);
 
 // Settings for finding
-user_pref("findbar.highlightAll", true);    // Highlight all words on that page
+//user_pref("findbar.highlightAll", true);    // Most user.js files already include highlight all words on the page
 user_pref("findbar.modalHighlight", true);  // Dim the rest of the page
 
 // When double-clicking a word on a page, only copy the word itself, not the space character next to it 
-user_pref("layout.word_select.eat_space_to_next_word", false);
+// user_pref("layout.word_select.eat_space_to_next_word", false);   // Most user.js files already include removing the white space next to a word
 
 // disable telemetry of what default browser you use [WINDOWS]
 user_pref("default-browser-agent.enabled", false);
@@ -196,7 +199,7 @@ user_pref("browser.tabs.loadBookmarksInTabs", true);
 ////////////////////////////////////////////////////
 
 // Disable add-on recommendations
-user_pref("extensions.getAddons.showPane", false);  // Disable about:addons "Recommendations" (uses Google Analytics) [HIDDEN PREF]
+// user_pref("extensions.getAddons.showPane", false);  // Most user.js files already include Disable about:addons "Recommendations" (uses Google Analytics) [HIDDEN PREF]
 user_pref("extensions.htmlaboutaddons.discover.enabled", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 
@@ -273,15 +276,13 @@ user_pref("privacy.trackingprotection.cryptomining.enabled", false);            
 user_pref("privacy.trackingprotection.fingerprinting.enabled", false);          // fingerprinting scripts on websites are ALLOWED
 
 // Dont use Pocket, use Wallabag or Readeck
-user_pref("extensions.pocket.enabled", false);                                  // Disable Pocket
-
-user_pref("browser.tabs.firefox-view", false);                                  // Disable Firefox View
+user_pref("extensions.pocket.enabled", false);                                  // Most user.js files already include Disable Pocket
 
 user_pref("general.autoScroll", true);                                          // Enable AutoScrolling
 
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);         // Enable userchrome.css
 
-user_pref("browser.urlbar.update2.engineAliasRefresh", true);                   // Add button to add custom search engines
+// user_pref("browser.urlbar.update2.engineAliasRefresh", true);                // Most user.js files already include Add button to add custom search engines
 
 user_pref("ui.systemUsesDarkTheme", 1);                                         // Dark Mode
 
@@ -303,6 +304,8 @@ user_pref("extensions.formautofill.available", "off");
 user_pref("extensions.formautofill.addresses.enabled", false);
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.formautofill.heuristics.enabled", false);
+
+
 
 EOF
 cat user-overrides.js >> user.js
