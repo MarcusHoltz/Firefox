@@ -250,7 +250,6 @@ user_pref("webgl.disabled", false);                                             
 //   My Custom FPP Stuff
 ////////////////////////////////////////////////////
 
-// !!!!!!!!Customization!!!!!!!!!!
 // Go easy on tracking protection
 // (Really, only use if you're also using adnauseam.)
 // Adnauseam needs access before any ad blocking, to click the ads.
