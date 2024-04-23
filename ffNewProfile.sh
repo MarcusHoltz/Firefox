@@ -24,8 +24,7 @@ ttsfox,
 ecosia-the-green-search,
 ddg-lite-search-provider,
 nighttab,
-fastforwardteam,
-audioctx-fingerprint-defender"
+fastforwardteam"
 echo "Creating Profile"
 firefox -CreateProfile $ffProfileName
 # sed will search for `Path=` it will then try and find the line with the name of the firefox profile specified above. Then remove all text to the left of the `=` sign.
